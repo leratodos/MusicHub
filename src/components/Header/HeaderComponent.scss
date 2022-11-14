@@ -1,0 +1,143 @@
+.header {
+    padding: 25px 25px;
+    position: fixed;
+    width: 100%;
+    background-color: #1B1A1D;
+    display: flex;
+    justify-content: right;
+    gap: 200px;
+    align-items: center;
+    border-bottom: 1px solid #433563;
+}
+// .search_block {
+//     position: relative;
+// }
+
+.search_input {
+    width: 300px;
+    padding: 10px 15px;
+    background-color: #3D3C3F;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 8px;
+
+}
+
+  
+
+
+
+.user_block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+    border-left: 1px solid #4F5EEE;
+
+    
+
+    .icon {
+        font-size: 30px;
+        color: #fff;
+
+        &:hover {
+            color: #993996;
+        }
+    }
+}
+
+.user_info {
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+ 
+}
+
+.user_name_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &:hover {
+       span {
+            color: #993996;
+       }
+    }
+    span {
+        display: block;
+        font-weight: 500;
+        font-size: 14x;
+        line-height: 21px;
+        color: #E0DFE1;
+
+        &:last-of-type {
+            font-size: 12px;
+            line-height: 18px;
+            color: #7C7C7B;
+        }
+
+    
+    }
+}
+
+.user_avatar {
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1233px) {
+    .header {
+        gap: 34px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .user_block {
+        gap: 10px;
+        padding-left: 0;
+        .icon {
+            display: none;
+        }
+    
+        .user_name_wrapper {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 685px) {
+    .header {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        // gap: 80px;
+        border-bottom: 0;
+        gap: 10px;
+    }
+
+    .user_block {
+        gap: 200px;
+        border-left: none;
+        border-bottom: none;
+        padding-bottom: 12px;
+    }
+
+    .search_block {
+        width: 100%;
+
+        .search_input {
+            width: 100%;
+
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import url(../assets/fonts/font-face.scss);
+
+body {
+    background-image: url(../assets/img/proba.png);
+    background-size: cover;
+}
+   
+.header_nav_wrapper {
+
+}   
+
+
+.main {
+    padding-top: 120px;
+}
+
+.main_wrapper {
+    /* display: flex;
+    justify-content: center; */
+}
+
+
+@media screen and (max-width: 685px) {
+    .main {
+    padding-top: 200px;
+}
+}
