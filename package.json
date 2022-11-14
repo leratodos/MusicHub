@@ -2,10 +2,7 @@
   "name": "musicapp",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "v18.12.1",
-    "npm": "8.19.2"
-  },
+
   
   "scripts": {
     "serve": "vue-cli-service serve",
