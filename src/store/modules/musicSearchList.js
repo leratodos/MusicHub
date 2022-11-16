@@ -14,7 +14,7 @@ export default {
 
                 if  (musicSearchList && musicSearchList.length > 0) {
                   
-                    console.log('OK')
+                    console.log('OK IT WORKS')
 
                 } else {
                     console.log('ERROR')

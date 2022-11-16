@@ -37,7 +37,7 @@ export default {
     methods: {
         ...mapActions(['fetchMusic']),
         createMusicList() {
-        this.fetchMusic()
+        this.fetchMusic('a')
        }
     }
   

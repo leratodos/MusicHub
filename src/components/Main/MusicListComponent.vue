@@ -10,7 +10,7 @@
                     <button class="download"><span class="icon-arrow-down"></span></button>
                     <button v:on="openModal" @click="showModal = track.id" class="info"><span class="icon-info"></span></button>
                 </div>
-                <modal v-if="showModal === track.id" @close="showModal = false" class="modal" @click="closeModal">
+                <div v-if="showModal === track.id" @close="showModal = false" class="modal" @click="closeModal">
                     <div class="modal_content">
                         <button @click="closeModal"  class="close_modal"><span class="icon-cancel-circle"></span></button>
                         <div class="info_wrapper">
@@ -33,7 +33,7 @@
                     </div>
                  
                     <!-- <img src="{{track.album.picture_small}}" alt=""> -->
-                </modal>
+                </div>
             </li>
        
             
