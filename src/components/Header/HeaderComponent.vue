@@ -3,6 +3,7 @@
         <header class="header">
            <div class="search_block">
                 <input @keyup.enter="createMusicList" v-model="searchQuery" type="search" class="search_input" placeholder=" Search...">
+                <span v-show="" >Oops..Not found, try again!</span>
             </div>
             <div class="user_block">
                 <a href="#">
@@ -29,8 +30,9 @@
 </template>
 
 <script>
+import { tSExpressionWithTypeArguments } from '@babel/types';
 import axios, { Axios } from 'axios';
-import { mapActions} from 'vuex';
+import { mapActions, mapGetters} from 'vuex';
 
 
 export default {
@@ -38,15 +40,19 @@ export default {
     data () {
         return {
             searchQuery: '',
-            musicSearchList: []
+            musicSearchList: [],
+            isError: false
         }
     },
     methods: {
+        
         ...mapActions(['fetchMusic']),
         createMusicList() {
-        this.fetchMusic(this.searchQuery)
-       }
-    }
+            this.fetchMusic(this.searchQuery);
+            this.searchQuery = '';
+        }, 
+    },
+
 }
 </script>
 
