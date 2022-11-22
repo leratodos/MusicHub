@@ -13,26 +13,28 @@ export default {
                 console.log(musicSearchList);
 
                 if  (musicSearchList && musicSearchList.length > 0) {
-                  
+                    
                     console.log('OK IT WORKS')
 
+
                 } else {
-                    console.log('ERROR')
-       
+                    console.log('NO!')
                 };
+              
                 ctx.commit('setMusicSearchList', musicSearchList);
             })
-        }
+        },
+
     },
     mutations: {
         setMusicSearchList(state, musicSearchList) {
             state.musicSearchList = musicSearchList
         },
+
    
     },
     state: {
         musicSearchList: [],
-
     },
     getters: {
         AllMusicSearchList(state) {

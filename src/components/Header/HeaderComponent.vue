@@ -3,7 +3,7 @@
         <header class="header">
            <div class="search_block">
                 <input @keyup.enter="createMusicList" v-model="searchQuery" type="search" class="search_input" placeholder=" Search...">
-                <span v-show="" >Oops..Not found, try again!</span>
+                <span v-show="this.isError" class="error">Oops..Not found, try again!</span>
             </div>
             <div class="user_block">
                 <a href="#">
