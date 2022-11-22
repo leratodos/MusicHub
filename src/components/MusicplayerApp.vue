@@ -18,8 +18,7 @@
 </template>
 
 <script>
-
-
+import axios, { Axios } from 'axios';
 import HeaderComponent from './Header/HeaderComponent.vue'
 import MusicListComponent from './Main/MusicListComponent.vue'
 import NavigationComponent from './Header/NavigationComponent.vue'
