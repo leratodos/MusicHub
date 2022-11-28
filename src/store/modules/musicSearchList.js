@@ -13,11 +13,11 @@ export default {
                 console.log(musicSearchList);
 
                 if  (musicSearchList && musicSearchList.length > 0) {
-                    
+                    ctx.commit('setErrorStatus', false);
                     console.log('OK IT WORKS')
 
-
                 } else {
+                    ctx.commit('setErrorStatus', true);
                     console.log('NO!')
                 };
               
@@ -30,15 +30,20 @@ export default {
         setMusicSearchList(state, musicSearchList) {
             state.musicSearchList = musicSearchList
         },
-
-   
+        setErrorStatus(state, errorStatus) {
+            state.isError = errorStatus
+        }
     },
     state: {
         musicSearchList: [],
+        isError: false
     },
     getters: {
         AllMusicSearchList(state) {
             return state.musicSearchList
         },
+        getErrorStatus(state) {
+            return state.isError
+        }
     },
 }

@@ -3,7 +3,9 @@
         <header class="header">
            <div class="search_block">
                 <input @keyup.enter="createMusicList" v-model="searchQuery" type="search" class="search_input" placeholder=" Search...">
-                <span v-show="this.isError" class="error">Oops..Not found, try again!</span>
+                <div v-show="isError" class="error">
+                    <p class="error_text">Oops..Not found, try again!</p>
+                </div>
             </div>
             <div class="user_block">
                 <a href="#">
@@ -41,7 +43,7 @@ export default {
         return {
             searchQuery: '',
             musicSearchList: [],
-            isError: false
+        
         }
     },
     methods: {
@@ -51,7 +53,16 @@ export default {
             this.fetchMusic(this.searchQuery);
             this.searchQuery = '';
         }, 
+     
     },
+
+    computed: {
+        ...mapGetters(['getErrorStatus']),
+        isError() {
+           return this.getErrorStatus
+        },
+   
+    }
 
 }
 </script>

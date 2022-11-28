@@ -26,9 +26,15 @@
 
 }
 
+
 .error {
-    color:#fff;
+
+    .error_text {
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.764);
+    }
 }
+
 
 
 
@@ -116,13 +122,18 @@
             display: none;
         }
     }
+
+    .error {
+        .error_text {
+            font-size: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 685px) {
     .header {
         flex-direction: column-reverse;
         align-items: flex-end;
-        // gap: 80px;
         border-bottom: 0;
         gap: 10px;
     }
@@ -142,4 +153,5 @@
 
         }
     }
+
 }
